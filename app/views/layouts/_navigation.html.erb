@@ -1,0 +1,22 @@
+<%= link_to t("nav.home"), root_path, :class => 'brand' %>
+<ul class="nav">
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to(t("nav.logout"), destroy_user_session_path, :method=>'delete') %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to(t("nav.login"), new_user_session_path)  %>
+    </li>
+  <% end %>
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to('Edit account', edit_user_registration_path) %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to(t("nav.signup"), new_user_registration_path)  %>
+    </li>
+  <% end %>
+  <li><%= link_to t("nav.who"), who_are_we_url %></li>
+</ul>

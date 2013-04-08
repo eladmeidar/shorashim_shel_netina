@@ -1,0 +1,11 @@
+he:
+  nav:
+    home: "בית"
+    login: "כניסה"
+    logout: "יציאה"
+    signup: "הרשמה"
+    who: "מי אנחנו?"
+  homepage:
+    header: "התנדבות"
+  signup:
+    header: "הרשמה"
